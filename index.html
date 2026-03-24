@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Movers | Junk Removal & Moving Philadelphia</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS STYLING --- */
+        :root {
+            --primary-blue: #0a192f;   /* Deep Midnight Blue */
+            --accent-blue: #112240;    /* Card Background */
+            --gold: #fcc419;           /* Highlight Color */
+            --text-white: #e6f1ff;
+            --text-dim: #8892b0;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-blue);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section Container */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            padding: 1.5rem 6%;
+            background: radial-gradient(circle at 15% 40%, #1a365d 0%, transparent 45%),
+                        radial-gradient(circle at 85% 70%, #0d1b2a 0%, transparent 45%);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            margin-bottom: 5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            line-height: 1.1;
+            color: white;
+        }
+
+        .logo-text p {
+            font-size: 0.6rem;
+            color: var(--gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: var(--text-white);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .btn-estimate {
+            background: var(--gold);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(252, 196, 25, 0.2);
+            transition: 0.3s;
+        }
+
+        .btn-estimate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(252, 196, 25, 0.3);
+        }
+
+        /* Hero Content */
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(252, 196, 25, 0.1);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .btn-call {
+            background: var(--gold);
+            color: #000;
+            padding: 18px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-services {
+            border: 1px solid var(--text-dim);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-services:hover {
+            background: var(--glass);
+        }
+
+        /* Services Grid Card */
+        .services-card {
+            background: var(--accent-blue);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+
+        .services-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .s-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .s-item {
+            background: var(--glass);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .s-item:hover {
+            background: rgba(252, 196, 25, 0.1);
+            color: var(--gold);
+        }
+
+        .card-footer {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .call-now {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .call-now small { font-size: 0.7rem; color: var(--text-dim); }
+        .call-now span { font-size: 1.2rem; font-weight: 800; color: var(--gold); }
+
+        /* Bottom Info Bar */
+        .info-bar {
+            background: #0d1b2a;
+            padding: 25px 6%;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        .info-bar span { display: flex; align-items: center; gap: 8px; }
+        .info-bar strong { color: var(--text-white); }
+
+        @media (max-width: 992px) {
+            .hero-container { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <nav>
+            <a href="#" class="mm-logo-container">
+    <img src="https://midnightmovers.net/wp-content/uploads/2025/08/Change-this-into-junk-removal-truck-kind-of-thing-e1773690570533.jpg" alt="Midnight Movers Logo" class="mm-main-logo">
+    <div class="mm-logo-text">
+        <h2 class="mm-brand-name">Midnight Movers</h2>
+        <p class="mm-tagline">PHILLY · EST. LOCALLY TRUSTED</p>
+    </div>
+</a>
+
+<style>
+    .mm-logo-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+    }
+
+    .mm-main-logo {
+        width: 60px; /* Thoda size badha diya taake details nazar aayein */
+        height: 60px;
+        object-fit: contain; /* Isse logo katega nahi aur poora frame mein aayega */
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 4px;
+        border: 1px solid #fcc419;
+    }
+
+    .mm-logo-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mm-brand-name {
+        color: #ffffff;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .mm-tagline {
+        color: #fcc419;
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-top: 4px;
+    }
+</style>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="tel:8568395188" class="btn-estimate">Free Estimate</a>
+        </nav>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">📍 SERVING PHILADELPHIA & SURROUNDING AREAS</div>
+                <h1>Your Space, <span>Perfectly</span> <br> Cleared & Moved</h1>
+                <p>Fast, reliable, and professional solutions for demolition, 
+<a href="https://maps.app.goo.gl/neaVPVUMNnYxRjYf7" style="color: inherit; text-decoration: none;">junk removal</a>, 
+and relocation. From clearing waste to moving your home, we handle it all with precision and care. 
+Our experienced team ensures every project is completed safely, efficiently, and on time. 
+Whether it’s removing unwanted materials, preparing a site for new construction, or helping you relocate smoothly, 
+we are committed to delivering dependable service and customer satisfaction.</p>
+                
+                <div class="hero-actions">
+                    <a href="tel:8568395188" class="btn-call">📞 (856) 839-5188</a>
+                    <a href="#services" class="btn-services">Our Services</a>
+                </div>
+
+                <div style="display: flex; gap: 30px; font-size: 0.9rem; font-weight: 600;">
+                    <span>⭐ 5-Star Service</span>
+                    <span>🛡️ Licensed & Insured</span>
+                    <span>♻️ Eco-Friendly Disposal</span>
+                </div>
+            </div>
+
+            <div class="services-card">
+                <h3>Our Core Services</h3>
+                <div class="s-grid">
+                    <div class="s-item">🚛 Junk Removal</div>
+                    <div class="s-item">🏚️ Demolition</div>
+                    <div class="s-item">📦 Packing Help</div>
+                    <div class="s-item">🚚 Local Moving</div>
+                    <div class="s-item">🧹 Site Cleanup</div>
+                    <div class="s-item">🏠 Estate Clearout</div>
+                </div>
+                
+                <div class="card-footer">
+                    <div class="call-now">
+                        <small>AVAILABLE 24/7</small>
+                        <span>(856) 839-5188</span>
+                    </div>
+                    <div style="font-size: 0.7rem; text-align: right; color: var(--text-dim);">
+                        Trusted by 1,000+ <br> Philly Residents
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-bar">
+        <span>📍 <strong>Address:</strong> 5024 Greene st Germantown, Philadelphia 19144</span>
+        <span>📧 <strong>Email:</strong> dbrizard04@gmail.com</span>
+        <span>🕒 <strong>Hours:</strong> Open 24/7</span>
+    </div>
+
+</body>
+</html>
+<section id="about" class="about-section">
+    <div class="about-container">
+        <div class="about-content">
+            <span class="about-badge">ABOUT MIDNIGHT MOVERS</span>
+            <h2>Trusted Professional Services Right Here in Philadelphia</h2>
+            <p>Midnight Movers is a locally owned and operated junk removal and 
+<a href="https://midnightmovers.net/" style="color: inherit; text-decoration: none;">demolition company</a> 
+serving Philadelphia and the surrounding communities. We take pride in delivering professional results with a personal touch — because your space is our priority.</p>
+            
+            <p>Whether it's a full estate cleanout, professional demolition, or local moving assistance — our experienced team shows up on time, does the job right, and leaves your property looking its best.</p>
+
+            <div class="about-features">
+                <div class="feature-item">✓ Reliable, on-time scheduling</div>
+                <div class="feature-item">✓ Residential & commercial clients</div>
+                <div class="feature-item">✓ Seasonal service packages</div>
+                <div class="feature-item">✓ Honest, transparent pricing</div>
+                <div class="feature-item">✓ Year-round availability</div>
+                <div class="feature-item">✓ Free estimates, no obligation</div>
+            </div>
+
+            <a href="tel:8568395188" class="btn-about">Get a Free Estimate Today</a>
+        </div>
+
+        <div class="about-visual">
+            <div class="main-image-card">
+                <img src="https://avatars.mds.yandex.net/i?id=760d6b95cfa27aa77762318a00771443bc715018-4544963-images-thumbs&n=13" alt="Moving Truck">
+                <div class="image-label">PHILADELPHIA — SERVICE DONE RIGHT</div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <strong>7+</strong>
+                    <span>Services Offered</span>
+                </div>
+                <div class="stat-box">
+                    <strong>5★</strong>
+                    <span>Customer Rating</span>
+                </div>
+                <div class="stat-box">
+                    <strong>24/7</strong>
+                    <span>Open Always</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-section {
+        padding: 80px 6%;
+        background-color: #f8fafc; /* Light background for contrast */
+        color: #0a192f;
+    }
+
+    .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .about-badge {
+        background: rgba(10, 25, 47, 0.05);
+        color: #0a192f;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .about-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.8rem;
+        margin: 20px 0;
+        line-height: 1.2;
+    }
+
+    .about-content p {
+        color: #475569;
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .about-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 30px 0;
+    }
+
+    .feature-item {
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-about {
+        display: inline-block;
+        background: #0a192f;
+        color: white;
+        padding: 16px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+    .btn-about:hover {
+        background: #fcc419;
+        color: #000;
+    }
+
+    /* Right Side Visuals */
+    .main-image-card {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+
+    .main-image-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .image-label {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(10, 25, 47, 0.8);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 30px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        backdrop-filter: blur(5px);
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .stat-box {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .stat-box strong {
+        display: block;
+        font-size: 1.8rem;
+        color: #0a192f;
+    }
+
+    .stat-box span {
+        font-size: 0.8rem;
+        color: #64748b;
+        font-weight: 600;
+    }
+
+    @media (max-width: 992px) {
+        .about-container { grid-template-columns: 1fr; }
+    }
+</style>
+<section id="services" class="services-grid-section">
+    <div class="grid-header">
+        <span class="grid-badge">WHAT WE DO</span>
+        <h2>Our Moving & Hauling Services</h2>
+        <p>Midnight Movers has the team and equipment to handle your <a href="https://maps.app.goo.gl/bkAup7EN1Ti2XHGD9" style="color: inherit; text-decoration: none;">junk removal and demolition services</a> 24/7 across Philadelphia.</p>
+    </div>
+
+    <div class="services-main-grid">
+        <div class="grid-card featured-card">
+            <div class="card-top">
+                <span class="icon-box">🚚</span>
+                <span class="card-tag">MOST POPULAR</span>
+            </div>
+            <h3>Local Moving</h3>
+            <p>Fast and safe residential moving services. We handle your belongings with master craftsmanship and care.</p>
+            <a href="tel:8568395188" class="card-link">Get Estimate →</a>
+        </div>
+
+        <div class="grid-card featured-card">
+            <div class="card-top">
+                <span class="icon-box">🚛</span>
+                <span class="card-tag">PROFESSIONAL</span>
+            </div>
+            <h3>Junk Removal</h3>
+            <p>Full-service junk removal for homes and offices. We haul away furniture, appliances, and unwanted debris.</p>
+            <a href="tel:8568395188" class="card-link">Get Estimate →</a>
+        </div>
+
+        <div class="grid-card featured-card">
+            <div class="card-top">
+                <span class="icon-box">🏚️</span>
+                <span class="card-tag">DEMOLITION</span>
+            </div>
+            <h3>Interior Demolition</h3>
+            <p>Controlled demolition for kitchen, bathroom, or office remodels. We clear out the old for the new.</p>
+            <a href="tel:8568395188" class="card-link">Get Estimate →</a>
+        </div>
+
+        <div class="grid-card featured-card">
+            <div class="card-top">
+                <span class="icon-box">📦</span>
+                <span class="card-tag">COMMERCIAL</span>
+            </div>
+            <h3>Estate Cleanouts</h3>
+            <p>Complete property clearing services for estates, foreclosures, or office transitions with professional disposal.</p>
+            <a href="tel:8568395188" class="card-link">Get Estimate →</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Styling for the Dark Blue Services Grid Section */
+    .services-grid-section {
+        padding: 100px 6%;
+        background-color: #0d1b2a; /* Deep Midnight Blue background */
+        text-align: center;
+        color: #ffffff;
+        scroll-margin-top: 80px; /* For the #services link anchor */
+    }
+
+    .grid-header { margin-bottom: 60px; }
+
+    .grid-badge {
+        display: inline-block;
+        border: 2px solid rgba(252, 196, 25, 0.4); /* Subtle Gold border */
+        color: #fcc419; /* Gold accent color */
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .grid-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        color: #ffffff;
+        margin: 0 0 15px 0;
+        line-height: 1.2;
+    }
+
+    .grid-header p {
+        color: #8892b0; /* Dimmed text color */
+        font-size: 1.1rem;
+        max-width: 650px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .services-main-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+        gap: 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    /* Base Styling for All Cards */
+    .grid-card {
+        background: #112240; /* Slightly lighter Midnight Blue for cards */
+        padding: 35px 25px;
+        border-radius: 24px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 380px;
+        transition: 0.4s ease;
+        position: relative;
+    }
+
+    /* FEATURED (OUTLINED) CARD STYLE FROM REFERENCE IMAGE */
+    .featured-card {
+        border: 2px solid #fcc419; /* Solid Gold/Yellow Outline */
+        box-shadow: 0 20px 40px rgba(252, 196, 25, 0.1); /* Subtle Gold glow */
+    }
+
+    /* Hover effect to make it interactive */
+    .grid-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(252, 196, 25, 0.2);
+    }
+
+    .card-top {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .icon-box {
+        width: 52px;
+        height: 52px;
+        background: #fcc419; /* Gold Icon Box */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 1.6rem;
+    }
+
+    .card-tag {
+        font-size: 0.65rem;
+        font-weight: 800;
+        color: #fcc419;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .grid-card h3 {
+        font-size: 1.4rem;
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-family: 'Playfair Display', serif;
+        line-height: 1.2;
+    }
+
+    .grid-card p {
+        color: #ccd6f6; /* Off-white main body text */
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        min-height: 80px;
+    }
+
+    .card-link {
+        color: #fcc419;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .card-link:hover {
+        letter-spacing: 1.5px; /* Slight expand on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+        .services-main-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+        .grid-header h2 { font-size: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+        .services-main-grid { grid-template-columns: 1fr; }
+    }
+</style>
+<section class="why-choose-section">
+    <div class="why-container">
+        <div class="why-text">
+            <span class="why-badge">WHY CHOOSE US</span>
+            <h2>Philadelphia's <span>Go-To</span> Junk & Moving Team</h2>
+            <p>We're not a big faceless company. We're your neighbors — and we care about your space like it's our own, providing <a href="https://www.google.com/search?kgmid=/g/11y_dq1f4p" style="color: inherit; text-decoration: none;">junk removal services</a> you can trust.</p>
+            
+            <div class="why-actions">
+                <a href="tel:8568395188" class="btn-why-call">📞 (856) 839-5188</a>
+                <a href="mailto:dbrizard04@gmail.com" class="btn-why-email">Send Email</a>
+            </div>
+        </div>
+
+        <div class="why-features-grid">
+            <div class="why-card">
+                <div class="why-icon">🎯</div>
+                <h4>Attention to Detail</h4>
+                <p>We don't cut corners — every item is handled with care and every area is cleaned up before we leave.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">💰</div>
+                <h4>Fair, Honest Pricing</h4>
+                <p>Clear estimates upfront with no hidden fees. You know exactly what you're paying for from the start.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">⏰</div>
+                <h4>Always On Time</h4>
+                <p>We respect your schedule. When we say we'll be there, we mean it. Fast and reliable response 24/7.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">📅</div>
+                <h4>Year-Round Service</h4>
+                <p>Spring through Winter, we've got a service for every season and every property need in Philly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-choose-section {
+        padding: 100px 6%;
+        background-color: #ffffff; /* Background White kar diya */
+        color: #0a192f; /* Text Dark Blue kar diya */
+    }
+
+    .why-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .why-badge {
+        background: rgba(10, 25, 47, 0.05); /* Light Blue badge background */
+        color: #0a192f;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    .why-text h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.2rem;
+        margin: 25px 0;
+        line-height: 1.1;
+        color: #0a192f;
+    }
+
+    .why-text h2 span {
+        color: #fcc419; /* Gold accent color */
+        font-style: italic;
+    }
+
+    .why-text p {
+        color: #475569; /* Slate grey text */
+        font-size: 1.1rem;
+        margin-bottom: 35px;
+    }
+
+    .why-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn-why-call {
+        background: #fcc419;
+        color: #000;
+        padding: 15px 30px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 800;
+        box-shadow: 0 10px 20px rgba(252, 196, 25, 0.2);
+    }
+
+    .btn-why-email {
+        border: 2px solid #0a192f;
+        color: #0a192f;
+        padding: 15px 30px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+    .btn-why-email:hover {
+        background: #0a192f;
+        color: white;
+    }
+
+    /* Features Grid Cards */
+    .why-features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .why-card {
+        background: #f8fafc; /* Very light grey/blue for subtle card look */
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid #e2e8f0;
+        transition: 0.3s;
+    }
+
+    .why-card:hover {
+        border-color: #fcc419;
+        background: white;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        transform: translateY(-5px);
+    }
+
+    .why-icon {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .why-card h4 {
+        color: #0a192f;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .why-card p {
+        color: #64748b;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 992px) {
+        .why-container { grid-template-columns: 1fr; text-align: center; }
+        .why-actions { justify-content: center; }
+        .why-features-grid { margin-top: 50px; }
+    }
+</style>
+<section id="reviews" class="reviews-section">
+    <div class="test-header">
+        <span class="test-badge">REVIEWS</span>
+        <h2>What Our Customers Say</h2>
+        <p>Philly homeowners and businesses trust Midnight Movers for professional service.</p>
+    </div>
+
+    <div class="test-container">
+        <div class="test-card featured-outline">
+            <div class="quote-mark">“</div>
+            <p>"The team completely transformed my move! They arrived on time, handled everything with care, and even helped with last-minute junk pickup. Highly recommend!"</p>
+            <div class="test-footer">
+                <div class="stars">★★★★★</div>
+                <strong>Maria L.</strong>
+                <span>Junk Removal · Philadelphia, PA</span>
+            </div>
+        </div>
+
+        <div class="test-card highlighted-card">
+            <div class="quote-mark">“</div>
+            <p>"I can't praise these guys enough! The demolition of our old shed was seamless. Fast, clean, and the pricing was super fair. Will definitely be using them again."</p>
+            <div class="test-footer">
+                <div class="stars">★★★★★</div>
+                <strong>Samuel K.</strong>
+                <span>Interior Demolition · Center City, PA</span>
+            </div>
+        </div>
+
+        <div class="test-card featured-outline">
+            <div class="quote-mark">“</div>
+            <p>"Outstanding! We hired them for an estate cleanout and the results made our building feel so much more welcoming. Professional and great communication."</p>
+            <div class="test-footer">
+                <div class="stars">★★★★★</div>
+                <strong>Robert M.</strong>
+                <span>Moving Services · Northeast Philly, PA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Styling for the Blue Reviews Section */
+    .reviews-section {
+        padding: 100px 6%;
+        background-color: #0a192f; /* Midnight Blue Theme */
+        text-align: center;
+        color: white;
+        scroll-margin-top: 80px; /* For the #reviews anchor link */
+    }
+
+    .test-header { margin-bottom: 60px; }
+
+    .test-badge {
+        background: rgba(252, 196, 25, 0.1);
+        color: #fcc419; /* Gold */
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        border: 1px solid #fcc419;
+    }
+
+    .test-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        margin: 25px 0 15px;
+    }
+
+    .test-header p {
+        color: #8892b0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .test-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .test-card {
+        background: #112240; /* Card Color */
+        padding: 40px;
+        border-radius: 24px;
+        text-align: left;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    /* Reference image jaisi Yellow/Gold Outline sab par */
+    .featured-outline {
+        border: 2px solid #fcc419;
+    }
+
+    /* Middle card ko thoda zyada "Glow" dene ke liye */
+    .highlighted-card {
+        border: 2px solid #fcc419;
+        box-shadow: 0 20px 40px rgba(252, 196, 25, 0.2);
+        transform: scale(1.05); /* Thoda bada dikhega */
+    }
+
+    .quote-mark {
+        font-size: 4rem;
+        color: #fcc419;
+        opacity: 0.3;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+
+    .test-card p {
+        color: #ccd6f6;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .test-footer {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 20px;
+    }
+
+    .stars { color: #fcc419; margin-bottom: 5px; }
+
+    .test-footer strong { display: block; font-size: 1.1rem; }
+
+    .test-footer span { font-size: 0.8rem; color: #8892b0; }
+
+    @media (max-width: 992px) {
+        .test-container { grid-template-columns: 1fr; }
+        .highlighted-card { transform: scale(1); }
+    }
+</style>
+<section id="faqs" class="faqs-section">
+    <div class="faq-container">
+        <div class="faq-header">
+            <span class="faq-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2>Common Questions Answered</h2>
+            <p>We believe in clear communication. Here are some answers to questions we often receive about our moving and hauling services in Philadelphia.</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What area do you serve?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We are proudly based in Germantown and serve the entire Philadelphia area and surrounding communities. We treat every space like it's our own, whether it's a home or a commercial property.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How do I get a free estimate?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can get a free, no-pressure estimate by calling us directly at (856) 839-5188 or emailing us at dbrizard04@gmail.com. We provide clear, honest pricing upfront with no hidden fees.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you offer removal of large appliances and furniture?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our full-service junk removal includes hauling away heavy items like appliances and furniture efficiently. We have the proper equipment and team to handle bulky removals safely.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Are your demolition services safe and controlled?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. We specialize in controlled interior and wall demolition for remodels. We prioritize safety and clean up the area completely after the job is done.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>When should I schedule my move or cleanout?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We are available 24/7. However, scheduling in advance helps ensure availability, especially for larger moves or extensive estate cleanouts. Contact us anytime to discuss your project needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Styling for the Modern White FAQs Section */
+    .faqs-section {
+        padding: 100px 6%;
+        background-color: #ffffff; /* Clean White Background */
+        color: #0a192f; /* Dark Blue Text */
+    }
+
+    .faq-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .faq-header {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .faq-badge {
+        background: rgba(10, 25, 47, 0.05);
+        color: #0a192f;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        border: 1px solid rgba(10, 25, 47, 0.1);
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    .faq-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.2rem;
+        color: #0a192f;
+        margin: 20px 0 15px 0;
+        line-height: 1.1;
+    }
+
+    .faq-header p {
+        color: #475569; /* Slate grey text */
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column for modern look */
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* FAQ Item Card Styling */
+    .faq-item {
+        background: #f8fafc; /* Very light grey for contrast on white */
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    .faq-item:hover {
+        border-color: #fcc419; /* Gold accent on hover */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    }
+
+    .faq-question {
+        padding: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .faq-question h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
+        color: #0a192f;
+    }
+
+    .faq-icon {
+        font-size: 1.5rem;
+        color: #fcc419; /* Gold icon */
+        font-weight: bold;
+    }
+
+    /* FAQ Answer Section (Initially hidden) */
+    .faq-answer {
+        padding: 0 25px 25px 25px;
+        border-top: 1px solid #e2e8f0;
+        background-color: white;
+    }
+
+    .faq-answer p {
+        color: #64748b; /* Lighter grey for answer text */
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin: 20px 0 0 0;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .faq-header h2 { font-size: 2.5rem; }
+        .faq-question h4 { font-size: 1.1rem; }
+    }
+</style>
+<section id="contact" class="mm-footer-wrapper">
+    <div class="mm-footer-container">
+        <div class="mm-footer-content">
+            <span class="mm-footer-badge">GET IN TOUCH</span>
+            <h2 class="mm-footer-title">Get Your Free Estimate</h2>
+            <p class="mm-footer-desc">Tell us about your property and we’ll give you a straight-forward quote. No pressure, no obligation.</p>
+            
+            <div class="mm-contact-grid">
+                <div class="mm-contact-item">
+                    <label>PHONE</label>
+                    <a href="tel:8568395188">(856) 839-5188</a>
+                </div>
+                <div class="mm-contact-item">
+                    <label>EMAIL</label>
+                    <a href="mailto:dbrizard04@gmail.com">dbrizard04@gmail.com</a>
+                </div>
+                <div class="mm-contact-item">
+                    <label>ADDRESS</label>
+                    <p>5024 Greene st, Philadelphia, PA 19144</p>
+                </div>
+                <div class="mm-contact-item">
+                    <label>BUSINESS HOURS</label>
+                    <p class="mm-hours-highlight">Open 24/7 — 7 Days a Week</p>
+                    <p class="mm-hours-sub">Available anytime for your needs.</p>
+                </div>
+            </div>
+
+            <div class="mm-footer-actions">
+                <a href="tel:8568395188" class="mm-btn-call">📞 Call Now</a>
+                <a href="mailto:dbrizard04@gmail.com" class="mm-btn-email">✉ Email Us</a>
+            </div>
+        </div>
+
+        <div class="mm-footer-map">
+            <div class="mm-map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.2103063062223!2d-75.14471019999999!3d39.9814053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c933c33f65f1%3A0x8266535ce76aa598!2sMidnightmovers!5e0!3m2!1sen!2s!4v1773697829786!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="mm-footer-bottom">
+        <p>© 2026 Midnight Movers. All rights reserved.</p>
+        <p>Philadelphia, PA & Surrounding Areas</p>
+        <p>(856) 839-5188</p>
+    </div>
+</section>
+
+<style>
+    /* Unique classes to prevent Hero Section issues */
+    .mm-footer-wrapper {
+        background-color: #0a192f; /* Midnight Blue */
+        padding: 80px 6% 30px;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        scroll-margin-top: 80px;
+    }
+
+    .mm-footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .mm-footer-content {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .mm-footer-map {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .mm-footer-badge {
+        color: #fcc419; /* Gold Accent */
+        font-weight: 800;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .mm-footer-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+    .mm-footer-desc {
+        color: #8892b0;
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    .mm-contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .mm-contact-item label {
+        display: block;
+        color: #fcc419;
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .mm-contact-item a, .mm-contact-item p {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .mm-hours-highlight {
+        color: #fcc419 !important;
+        font-weight: 800;
+    }
+
+    .mm-hours-sub {
+        font-size: 0.8rem !important;
+        opacity: 0.7;
+    }
+
+    .mm-footer-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .mm-btn-call {
+        background: #fcc419;
+        color: #000;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 800;
+    }
+
+    .mm-btn-email {
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .mm-map-frame {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mm-footer-bottom {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: #475569;
+    }
+
+    @media (max-width: 768px) {
+        .mm-footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+    }
+</style>
